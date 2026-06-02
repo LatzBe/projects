@@ -1,0 +1,67 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  avatar    String?
+  createdAt DateTime @default(now())
+  follows   Follow[]
+}
+
+model Influencer {
+  id            String     @id @default(cuid())
+  name          String
+  handle        String
+  platform      Platform
+  avatar        String?
+  bio           String?
+  followerCount Int        @default(0)
+  socialUrl     String
+  createdAt     DateTime   @default(now())
+  products      Product[]
+  follows       Follow[]
+
+  @@unique([handle, platform])
+}
+
+model Product {
+  id           String     @id @default(cuid())
+  title        String
+  description  String?
+  imageUrl     String?
+  price        Float?
+  currency     String     @default("USD")
+  buyUrl       String
+  category     String?
+  tags         String[]
+  influencerId String
+  influencer   Influencer @relation(fields: [influencerId], references: [id], onDelete: Cascade)
+  crawledAt    DateTime   @default(now())
+  createdAt    DateTime   @default(now())
+}
+
+model Follow {
+  userId       String
+  influencerId String
+  createdAt    DateTime   @default(now())
+  user         User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  influencer   Influencer @relation(fields: [influencerId], references: [id], onDelete: Cascade)
+
+  @@id([userId, influencerId])
+}
+
+enum Platform {
+  INSTAGRAM
+  TIKTOK
+  YOUTUBE
+  PINTEREST
+}
