@@ -6,7 +6,7 @@ import { AuthResponse, User } from './models';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private readonly API = 'http://localhost:3000/api';
+  private readonly API = '/api';
   currentUser = signal<User | null>(null);
 
   constructor(private http: HttpClient, private router: Router) {

@@ -4,7 +4,7 @@ import { Platform, Influencer, Product } from './models';
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
-  private readonly API = 'http://localhost:3000/api';
+  private readonly API = '/api';
 
   constructor(private http: HttpClient) {}
 
