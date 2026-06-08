@@ -1,3 +1,15 @@
+:root {
+  --grad-start:  #5b21b6;
+  --grad-end:    #9333ea;
+  --gradient:    linear-gradient(135deg, var(--grad-start) 0%, var(--grad-end) 100%);
+  --accent:      #f59e0b;
+  --accent-dark: #d97706;
+  --bg:          #fefce8;
+  --surface:     #ffffff;
+  --text:        #1a1a2e;
+  --text-muted:  #6b7280;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,8 +18,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #f8f9fa;
-  color: #1a1a2e;
+  background: var(--bg);
+  color: var(--text);
   min-height: 100vh;
 }
 
@@ -19,11 +31,11 @@ body {
 
 .mat-mdc-card {
   border-radius: 16px !important;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
+  box-shadow: 0 2px 12px rgba(91,33,182,0.08) !important;
 }
 
 .mat-mdc-raised-button.mat-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  background: var(--gradient) !important;
 }
 
 a {
@@ -31,16 +43,9 @@ a {
   color: inherit;
 }
 
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
-  border-radius: 3px;
-}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 3px; }
 
 .platform-chip {
   display: inline-flex;
@@ -54,13 +59,13 @@ a {
   letter-spacing: 0.5px;
 
   &.INSTAGRAM { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; }
-  &.TIKTOK { background: #000; color: white; }
-  &.YOUTUBE { background: #ff0000; color: white; }
+  &.TIKTOK    { background: #000; color: white; }
+  &.YOUTUBE   { background: #ff0000; color: white; }
   &.PINTEREST { background: #e60023; color: white; }
 }
 
 .follower-count {
   font-size: 13px;
-  color: #666;
+  color: var(--text-muted);
   font-weight: 500;
 }

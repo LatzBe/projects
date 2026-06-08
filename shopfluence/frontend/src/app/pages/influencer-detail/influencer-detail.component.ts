@@ -19,7 +19,7 @@ import { Influencer } from '../../core/models';
       </div>
     } @else if (influencer) {
       <div>
-        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 0; margin-bottom: 0;">
+        <div style="background: linear-gradient(135deg, #5b21b6 0%, #9333ea 100%); padding: 40px 0; margin-bottom: 0;">
           <div style="max-width: 1200px; margin: 0 auto; padding: 0 16px; display: flex; align-items: flex-end; gap: 24px; flex-wrap: wrap;">
             <img [src]="influencer.avatar || 'https://i.pravatar.cc/120'"
                  [alt]="influencer.name"
@@ -46,7 +46,7 @@ import { Influencer } from '../../core/models';
               </a>
               <button mat-raised-button [color]="isFollowed ? 'warn' : ''"
                       [style.background]="isFollowed ? '' : 'white'"
-                      [style.color]="isFollowed ? '' : '#667eea'"
+                      [style.color]="isFollowed ? '' : '#5b21b6'"
                       (click)="toggleFollow()">
                 <mat-icon>{{ isFollowed ? 'person_remove' : 'person_add' }}</mat-icon>
                 {{ isFollowed ? 'Unfollow' : 'Follow' }}

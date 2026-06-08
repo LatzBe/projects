@@ -56,7 +56,7 @@ import { Influencer, Platform } from '../../core/models';
             <mat-card style="overflow: hidden; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;"
                       (mouseenter)="inf['hovered']=true" (mouseleave)="inf['hovered']=false"
                       [style.transform]="inf['hovered'] ? 'translateY(-4px)' : 'none'">
-              <div style="background: linear-gradient(135deg, #667eea, #764ba2); height: 80px; position: relative;">
+              <div style="background: linear-gradient(135deg, #5b21b6, #9333ea); height: 80px; position: relative;">
                 <img [src]="inf.avatar || 'https://i.pravatar.cc/80?img=1'"
                      [alt]="inf.name"
                      style="width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 3px solid white; position: absolute; bottom: -36px; left: 20px;">

@@ -11,7 +11,7 @@ import { AuthService } from '../../core/auth.service';
   standalone: true,
   imports: [RouterLink, RouterLinkActive, MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule],
   template: `
-    <mat-toolbar style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+    <mat-toolbar style="background: linear-gradient(135deg, #5b21b6 0%, #9333ea 100%); color: white; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(91,33,182,0.3);">
       <a routerLink="/home" style="font-size: 22px; font-weight: 700; letter-spacing: -0.5px; color: white; display: flex; align-items: center; gap: 8px;">
         <mat-icon>shopping_bag</mat-icon> Shopfluence
       </a>
