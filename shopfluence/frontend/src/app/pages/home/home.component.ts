@@ -26,7 +26,7 @@ import { Influencer, Platform } from '../../core/models';
     <div class="page-container">
       <div style="margin-bottom: 32px;">
         <h1 style="font-size: 32px; font-weight: 700; margin-bottom: 8px;">Discover Creators</h1>
-        <p style="color: #666; font-size: 16px;">Follow your favourite influencers and shop their picks</p>
+        <p style="color: #a78bca; font-size: 16px;">Follow your favourite influencers and shop their picks</p>
       </div>
 
       <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 24px;">
@@ -65,16 +65,16 @@ import { Influencer, Platform } from '../../core/models';
                 <div style="display: flex; justify-content: space-between; align-items: flex-start;">
                   <div>
                     <div style="font-weight: 700; font-size: 17px;">{{ inf.name }}</div>
-                    <div style="color: #888; font-size: 13px;">&#64;{{ inf.handle }}</div>
+                    <div style="color: #a78bca; font-size: 13px;">&#64;{{ inf.handle }}</div>
                   </div>
                   <span class="platform-chip {{ inf.platform }}">{{ inf.platform }}</span>
                 </div>
                 @if (inf.bio) {
-                  <p style="font-size: 13px; color: #555; margin: 10px 0; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                  <p style="font-size: 13px; color: #c4b5d9; margin: 10px 0; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
                     {{ inf.bio }}
                   </p>
                 }
-                <div style="display: flex; gap: 16px; margin-top: 10px; font-size: 13px; color: #666;">
+                <div style="display: flex; gap: 16px; margin-top: 10px; font-size: 13px; color: #a78bca;">
                   <span><strong>{{ formatFollowers(inf.followerCount) }}</strong> followers</span>
                   @if (inf._count) {
                     <span><strong>{{ inf._count.products }}</strong> products</span>

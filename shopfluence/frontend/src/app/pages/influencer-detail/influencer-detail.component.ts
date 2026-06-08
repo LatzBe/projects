@@ -66,7 +66,7 @@ import { Influencer } from '../../core/models';
               }
             </div>
           } @else {
-            <div style="text-align: center; padding: 60px; background: white; border-radius: 16px;">
+            <div style="text-align: center; padding: 60px; background: #1a1535; border-radius: 16px;">
               <mat-icon style="font-size: 64px; height: 64px; width: 64px; color: #ddd;">inventory_2</mat-icon>
               <p style="margin-top: 16px; color: #888;">No products yet</p>
             </div>

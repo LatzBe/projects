@@ -4,10 +4,13 @@
   --gradient:    linear-gradient(135deg, var(--grad-start) 0%, var(--grad-end) 100%);
   --accent:      #f59e0b;
   --accent-dark: #d97706;
-  --bg:          #fefce8;
-  --surface:     #ffffff;
-  --text:        #1a1a2e;
-  --text-muted:  #6b7280;
+  --bg:          #0d0b1e;
+  --bg-surface:  #1a1535;
+  --bg-card:     #201848;
+  --surface:     #1a1535;
+  --text:        #f0e8ff;
+  --text-muted:  #a78bca;
+  --border:      rgba(167,139,202,0.15);
 }
 
 * {
@@ -21,6 +24,7 @@ body {
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
+  color-scheme: dark;
 }
 
 .page-container {
@@ -31,8 +35,27 @@ body {
 
 .mat-mdc-card {
   border-radius: 16px !important;
-  box-shadow: 0 2px 12px rgba(91,33,182,0.08) !important;
+  background: var(--bg-card) !important;
+  color: var(--text) !important;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.4) !important;
+  border: 1px solid var(--border) !important;
 }
+
+.mat-mdc-card-content, .mat-mdc-card-actions { color: var(--text) !important; }
+
+.mat-mdc-form-field {
+  --mdc-outlined-text-field-label-text-color: var(--text-muted);
+  --mdc-outlined-text-field-input-text-color: var(--text);
+  --mdc-outlined-text-field-outline-color: var(--border);
+  --mdc-outlined-text-field-focus-outline-color: var(--grad-end);
+}
+
+.mat-mdc-menu-panel {
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border) !important;
+}
+
+.mat-mdc-menu-item { color: var(--text) !important; }
 
 .mat-mdc-raised-button.mat-primary {
   background: var(--gradient) !important;
